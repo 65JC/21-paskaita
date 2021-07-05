@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 paskaita</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+
+        // Procedurinis
+
+        var trikampis = [3, 5, 6];
+
+        // a < b+c
+        // b < a+c
+        // c < a+b
+
+        //pagal krastine
+        if ((trikampis[0] < trikampis[1] + trikampis[2]) && (trikampis[1] < trikampis[0] + trikampis[2]) && (trikampis[2] < trikampis[1] + trikampis[0])) {
+            console.log("Trikampi sudaryti galima");
+            var a = trikampis[0];
+            var b = trikampis[1];
+            var c = trikampis[2];
+
+
+
+            if (a != b && b != c && c != a) {
+                console.log("Trikampis yra ivairiakrastis");
+            } else if (a == b && b == c && a == c) {
+                console.log("Trikampis yra lygiakrastis");
+            } else {
+                console.log("Trikampis yra lygiasonis");
+
+            }
+            //pagal kampa
+
+            if ( (b * b + c * c == a * a) || (a * a + c * c == b * b) || (a * a + b * b == c * c)) {
+                console.log("Trikampis yra status");
+
+            }
+            else if ( (b * b + c * c < a * a) ||  (a * a) + (c * c) < (b * b) ||  (a * a) + (b * b) < (c * c)) {
+                console.log("Trikampis yra bukasis");
+            }
+            else {
+                console.log("Trikampis yra smailusis");
+            }
+
+
+
+        } else {
+            console.log("Trikampio sudaryti negalima");
+        }
+        // Funkcinis
+    </script>
+</body>
+
+</html>
